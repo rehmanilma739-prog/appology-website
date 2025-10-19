@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thank You</title>
+
+  <!-- Substitute cursive font (some fonts like "Baguet Script" don't exist on Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#ffe9f1,#ffd9ec);
+      font-family: "Dancing Script", cursive;
+      color:#ffffff;
+    }
+
+    .container{
+      text-align:center;
+      background: rgba(255,255,255,0.08);
+      padding:40px;
+      border-radius:24px;
+      box-shadow: 0 8px 30px rgba(255,105,180,0.15);
+      width:90%;
+      max-width:540px;
+    }
+
+    /* SVG bouquet */
+    .bouquet {
+      width:200px;
+      height:auto;
+      display:block;
+      margin: 0 auto 18px;
+      filter: drop-shadow(0 6px 10px rgba(255,105,180,0.25));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h1{
+      margin:6px 0 0;
+      font-size:3.2rem;
+      color:#ffeef7;
+      letter-spacing:1px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    @keyframes float {
+      0%,100%{ transform: translateY(0); }
+      50%{ transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Inline SVG bouquet -->
+    <svg class="bouquet" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- wrapper -->
+      <g transform="translate(10,6) scale(0.8)">
+        <!-- stems -->
+        <path d="M40 70 C32 90, 25 100, 15 110" stroke="#2f8a4a" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M80 70 C88 90, 95 100, 105 110" stroke="#2f8a4a" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+        <!-- wrapping -->
+        <path d="M30 65 L60 120 L90 65 Z" fill="#e77fb1" stroke="#d95e96" stroke-width="2" opacity="0.95"/>
+        <ellipse cx="60" cy="118" rx="22" ry="8" fill="#d95e96" opacity="0.4"/>
+
+        <!-- flowers -->
+        <g transform="translate(25,20)">
+          <!-- left flower -->
+          <circle cx="10" cy="8" r="6" fill="#ffccf2"/>
+          <path d="M10 2 L10 14" stroke="#e66a9e" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <g transform="translate(45,8)">
+          <!-- center big flower -->
+          <circle cx="10" cy="10" r="8" fill="#ffd36b"/>
+          <circle cx="10" cy="10" r="4" fill="#ffb336"/>
+        </g>
+
+        <g transform="translate(70,20)">
+          <!-- right flower -->
+          <circle cx="10" cy="8" r="6" fill="#f4a6f0"/>
+          <path d="M10 2 L10 14" stroke="#d56aa6" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <!-- small accents -->
+        <circle cx="40" cy="30" r="2" fill="#88d19a"/>
+        <circle cx="70" cy="34" r="2" fill="#88d19a"/>
+      </g>
+    </svg>
+
+    <h1>Thank You 💖</h1>
+  </div>
+</body>
+</html>
